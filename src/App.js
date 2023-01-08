@@ -8,13 +8,12 @@ function App() {
         <Form />
         <h1>New York</h1>
         <ul>
-          <li>Last updated: Tuesday 10:00</li>
           <li>Cloudy</li>
           <li>Humidity: 80%</li>
           <li>Wind: 10 km/h</li>
         </ul>
-
-        <div className="temp">15</div>
+        <small>Last updated: Tuesday 10:00</small>
+        <div className="temp">15°C</div>
       </div>
       <div className="footer">
         <a
