@@ -7,6 +7,10 @@
   padding: 50px;
 }
 
+.App ul li {
+  list-style: none;
+}
+
 .App h1 {
   padding: 15px;
 }

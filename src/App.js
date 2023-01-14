@@ -1,11 +1,13 @@
 import "./App.css";
 import Form from "./Form";
+import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
       <div className="content">
         <Form />
+        <Search />
         <h1>New York</h1>
         <ul>
           <li>Cloudy</li>
