@@ -5,10 +5,14 @@ export default function Form() {
     <form>
       <div className="row">
         <div className="col-8">
-          <input type="search" class="form-control" value="search city..." />
+          <input
+            type="search"
+            className="form-control"
+            value="search city..."
+          />
         </div>
         <div className="col-4">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </div>
