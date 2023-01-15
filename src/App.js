@@ -2,7 +2,7 @@ import "./App.css";
 import Form from "./Form";
 import axios from "axios";
 import React, { useState } from "react";
-import FriendlyDate from "./FriendlyDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -27,39 +27,7 @@ export default function App() {
     return (
       <div className="App">
         <Form />
-        <h1>{weatherData.city}</h1>
-        <h5>
-          <FriendlyDate date={weatherData.date} />
-        </h5>
-        <h6 className="text-capitalize">{weatherData.description} </h6>
-        <div className="container">
-          <div className="row">
-            <div className="col-6 ">
-              <img src={weatherData.icon} alt="sunny"></img>
-              <span className="temp">
-                {Math.round(weatherData.temperature)} °C
-              </span>
-            </div>
-            <div className="col-6">
-              <ul>
-                <li>Humidity: {weatherData.humidity}%</li>
-                <li>Wind: {weatherData.wind} m/h</li>
-                <li>Feels like: {Math.round(weatherData.feels_like)}°C</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="footer">
-          <a
-            href="https://github.com/plnvsln/weather-react"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {" "}
-            Open-sourced{" "}
-          </a>
-          by Polina Chernii
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
