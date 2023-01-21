@@ -1,15 +1,14 @@
 import "./App.css";
-import Form from "./Form";
-import axios from "axios";
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import axios from "axios";
 
-export default function App() {
+export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(responce) {
     console.log(responce.data);
-
     setWeatherData({
       ready: true,
       temperature: responce.data.temperature.current,
@@ -23,17 +22,44 @@ export default function App() {
     });
   }
 
+  function search() {
+    const apiKey = `f1089ea2a06e9tf3co914bf9c65aa287`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.vaue);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="App">
-        <Form />
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-8">
+              <input
+                type="search"
+                className="form-control"
+                placeholder="search city..."
+                onChange={handleCityChange}
+              />
+            </div>
+            <div className="col-4">
+              <input type="submit" value="Search" className="btn btn-primary" />
+            </div>
+          </div>
+        </form>
         <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
-    const apiKey = `f1089ea2a06e9tf3co914bf9c65aa287`;
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query={London}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
     return `Loading`;
   }
 }
