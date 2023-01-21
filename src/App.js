@@ -9,6 +9,7 @@ export default function App(props) {
 
   function handleResponse(responce) {
     console.log(responce.data);
+    // console.error(responce.data);
     setWeatherData({
       ready: true,
       temperature: responce.data.temperature.current,
@@ -34,7 +35,7 @@ export default function App(props) {
   }
 
   function handleCityChange(event) {
-    setCity(event.target.vaue);
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
