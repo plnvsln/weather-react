@@ -27,17 +27,6 @@ export default function WeatherInfo(props) {
           </div>
         </div>
       </div>
-      <div className="footer">
-        <a
-          href="https://github.com/plnvsln/weather-react"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          Open-sourced{" "}
-        </a>
-        by Polina Chernii
-      </div>
     </div>
   );
 }

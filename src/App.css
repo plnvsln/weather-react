@@ -1,10 +1,15 @@
-.App {
-  margin: 50px;
+body {
+  background: #c8e8ed;
 }
-.content {
-  border: solid 1px black;
-  border-radius: 10px;
-  padding: 50px;
+
+.App {
+  margin: 50px 50px 10px 400px;
+  background: #f7fdb1;
+  padding: 30px;
+  border: 2px solid #ded473;
+  border-radius: 15px;
+  max-width: 40%;
+  color: #8d8c8c;
 }
 
 .App ul li {
@@ -17,13 +22,14 @@
 
 .temp {
   font-size: 80px;
-  color: #1a8989;
+  color: #8d8c8c;
 }
 
 .footer {
   color: rgb(64, 63, 63);
   font-size: 12px;
-  margin: 15px;
+
+  text-align: center;
 }
 canvas {
   padding: 0px 15px;
@@ -31,9 +37,10 @@ canvas {
 
 .unit {
   font-size: 25px;
-  color: #1a8989;
+  color: #8d8c8c;
   position: fixed;
 }
 .unit a {
   text-decoration: none;
+  color: #b9a809;
 }

@@ -8,6 +8,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App defaultCity="London" />
+    <div className="footer">
+      <a
+        href="https://github.com/plnvsln/weather-react"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {" "}
+        Open-sourced{" "}
+      </a>
+      by Polina Chernii
+    </div>
   </React.StrictMode>
 );
 

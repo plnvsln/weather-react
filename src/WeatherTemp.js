@@ -17,10 +17,10 @@ export default function WeatherTemp(props) {
         <span className="temp">{Math.round(props.celsius)} </span>
         <span className="unit">
           {" "}
-          °C | °{" "}
+          °C |{" "}
           <a href="/" onClick={showF}>
             {" "}
-            F
+            °F
           </a>{" "}
         </span>
       </span>
