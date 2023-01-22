@@ -16,7 +16,7 @@
 }
 
 .temp {
-  font-size: 50px;
+  font-size: 80px;
   color: #1a8989;
 }
 
@@ -26,5 +26,14 @@
   margin: 15px;
 }
 canvas {
-  margin: 10px;
+  padding: 0px 15px;
+}
+
+.unit {
+  font-size: 25px;
+  color: #1a8989;
+  position: fixed;
+}
+.unit a {
+  text-decoration: none;
 }
