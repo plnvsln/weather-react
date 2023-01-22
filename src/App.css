@@ -17,7 +17,7 @@
 
 .temp {
   font-size: 50px;
-  color: rgb(26, 138, 138);
+  color: #1a8989;
 }
 
 .footer {
@@ -25,6 +25,6 @@
   font-size: 12px;
   margin: 15px;
 }
-img {
-  width: 25%;
+canvas {
+  margin: 10px;
 }
