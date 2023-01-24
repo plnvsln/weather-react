@@ -1,0 +1,12 @@
+.forecast {
+  text-align: center;
+  font-weight: 600;
+}
+
+.forecast-temp-min {
+  font-weight: 400;
+}
+
+.forecast-icon {
+  margin: 5px;
+}
